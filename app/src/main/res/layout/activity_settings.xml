@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F4FF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Settings" android:textSize="26sp" android:textStyle="bold" android:textColor="#0D2A6E"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Senzakwenzeke • Bothas Hill, Durban" android:textSize="11sp" android:textColor="#C9982E" android:textStyle="bold" android:layout_marginBottom="16dp"/>
+
+        <!-- USER PROFILE HEADER (Apple Style) -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/appleHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:strokeColor="#0D2A6E"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/circleInitials"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/circle_gray"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="16dp">
+                    <TextView
+                        android:id="@+id/tvAppleName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#000000"/>
+                    <TextView
+                        android:id="@+id/tvAppleEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:textColor="#888888"/>
+                </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnEditProfile"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Edit"
+                    android:textColor="#0D2A6E"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ACCOUNT -->
+        <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" app:cardCornerRadius="16dp" app:cardElevation="4dp" app:cardBackgroundColor="#FFFFFF" app:strokeColor="#0D2A6E" app:strokeWidth="1dp" android:layout_marginBottom="16dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/tilChangeName" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Change Full Name" app:boxStrokeColor="#0D2A6E" app:boxCornerRadiusTopStart="12dp" app:boxCornerRadiusTopEnd="12dp" app:boxCornerRadiusBottomStart="12dp" app:boxCornerRadiusBottomEnd="12dp">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/etChangeName" android:layout_width="match_parent" android:layout_height="56dp" android:textColor="#0D2A6E"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/tilChangePhone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:hint="Change Phone" app:boxStrokeColor="#0D2A6E" app:boxCornerRadiusTopStart="12dp" app:boxCornerRadiusTopEnd="12dp" app:boxCornerRadiusBottomStart="12dp" app:boxCornerRadiusBottomEnd="12dp">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/etChangePhone" android:layout_width="match_parent" android:layout_height="56dp" android:textColor="#0D2A6E"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnSaveAccount" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginTop="12dp" android:text="Save Account Changes" app:cornerRadius="12dp" android:backgroundTint="#0D2A6E" android:textColor="#FFD700" android:textSize="11sp" android:textStyle="bold"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- APP PREFERENCES -->
+        <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" app:cardCornerRadius="16dp" app:cardElevation="4dp" app:cardBackgroundColor="#FFFFFF" app:strokeColor="#0D2A6E" app:strokeWidth="1dp" android:layout_marginBottom="16dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="App Preferences" android:textSize="12sp" android:textStyle="bold" android:textColor="#0D2A6E" android:layout_marginBottom="8dp"/>
+
+                <!-- Toggles -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="12dp">
+                    <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="Push Notifications" android:textSize="12sp" android:textColor="#0D2A6E"/>
+                    <com.google.android.material.switchmaterial.SwitchMaterial android:id="@+id/switchNotifications" android:layout_width="wrap_content" android:layout_height="wrap_content" app:thumbTint="#C9982E" android:checked="true"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="12dp">
+                    <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="Dark Mode" android:textSize="12sp" android:textColor="#0D2A6E"/>
+                    <com.google.android.material.switchmaterial.SwitchMaterial android:id="@+id/switchDarkMode" android:layout_width="wrap_content" android:layout_height="wrap_content" app:thumbTint="#C9982E"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="12dp" android:layout_marginBottom="16dp">
+                    <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="Email Updates (Promos)" android:textSize="12sp" android:textColor="#0D2A6E"/>
+                    <com.google.android.material.switchmaterial.SwitchMaterial android:id="@+id/switchEmail" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <!-- Options 3 to 7 -->
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnPref3" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginBottom="8dp" android:text="3. Service Area - Bothas Hill, DBN" android:textSize="11sp" android:textAlignment="viewStart" app:cornerRadius="12dp" android:backgroundTint="#FFFFFF" android:textColor="#0D2A6E" app:strokeColor="#C9982E" app:strokeWidth="1dp"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnPref4" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginBottom="8dp" android:text="4. Lobola &amp; Wedding Offers" android:textSize="11sp" android:textAlignment="viewStart" app:cornerRadius="12dp" android:backgroundTint="#FFFFFF" android:textColor="#0D2A6E" app:strokeColor="#0D2A6E" app:strokeWidth="1dp"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnPref5" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginBottom="8dp" android:text="5. Currency - ZAR (R)" android:textSize="11sp" android:textAlignment="viewStart" app:cornerRadius="12dp" android:backgroundTint="#FFFFFF" android:textColor="#0D2A6E" app:strokeColor="#0D2A6E" app:strokeWidth="1dp"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnPref6" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginBottom="8dp" android:text="6. Business Profile - V1.0" android:textSize="11sp" android:textAlignment="viewStart" app:cornerRadius="12dp" android:backgroundTint="#FFFFFF" android:textColor="#0D2A6E" app:strokeColor="#0D2A6E" app:strokeWidth="1dp"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnPref7" android:layout_width="match_parent" android:layout_height="48dp" android:text="7. Privacy &amp; Terms" android:textSize="11sp" android:textAlignment="viewStart" app:cornerRadius="12dp" android:backgroundTint="#FFFFFF" android:textColor="#0D2A6E" app:strokeColor="#0D2A6E" app:strokeWidth="1dp"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- SECURITY & PRIVACY -->
+        <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" app:cardCornerRadius="16dp" app:cardElevation="4dp" app:cardBackgroundColor="#FFFFFF" android:layout_marginBottom="16dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Security &amp; Privacy" android:textSize="12sp" android:textStyle="bold" android:textColor="#0D2A6E" android:layout_marginBottom="8dp"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnChangePassword" android:layout_width="match_parent" android:layout_height="48dp" android:text="Change Password" app:cornerRadius="12dp" android:backgroundTint="#FFFFFF" android:textColor="#0D2A6E" app:strokeColor="#0D2A6E" app:strokeWidth="1dp"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnLogout" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="10dp" android:text="Logout - Clear Session" app:cornerRadius="12dp" android:backgroundTint="#C9982E" android:textColor="#FFFFFF"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="POPIA Compliant • Data Encrypted" android:textSize="9sp" android:textColor="#888888" android:gravity="center" android:layout_marginTop="10dp"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>

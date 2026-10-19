@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- HEADER -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="20dp"
+            android:background="#FFFFFF">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Instant Free Quote"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#0D2A6E"/>
+            <View
+                android:layout_width="30dp"
+                android:layout_height="2dp"
+                android:background="#C9982E"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select your preferences for an estimate"
+                android:textSize="10sp"
+                android:textColor="#888888"/>
+        </LinearLayout>
+
+        <!-- QUOTE CARD -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            android:layout_margin="16dp"
+            app:cardBackgroundColor="#FFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Service Category"
+                    android:textSize="11sp"
+                    android:textColor="#0D2A6E"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp"/>
+
+                <RadioGroup
+                    android:id="@+id/rgServiceType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+                    <RadioButton
+                        android:id="@+id/rbDecor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Decor &amp; Styling (From R1500)"
+                        android:textSize="12sp"
+                        android:textColor="#0D2A6E"/>
+                    <RadioButton
+                        android:id="@+id/rbCateringBasic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Basic Catering (R180 pp)"
+                        android:textSize="12sp"
+                        android:textColor="#0D2A6E"/>
+                    <RadioButton
+                        android:id="@+id/rbCateringStandard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Standard Catering (R250 pp)"
+                        android:textSize="12sp"
+                        android:textColor="#0D2A6E"/>
+                    <RadioButton
+                        android:id="@+id/rbCateringPremium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Premium Catering (R320 pp)"
+                        android:textSize="12sp"
+                        android:textColor="#0D2A6E"/>
+                    <RadioButton
+                        android:id="@+id/rbFullCombo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Full Event Combo (From R12000)"
+                        android:textSize="12sp"
+                        android:textColor="#0D2A6E"/>
+                </RadioGroup>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilGuestsCount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Number of Guests"
+                    app:boxStrokeColor="#0D2A6E"
+                    android:layout_marginBottom="12dp"
+                    android:visibility="visible">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etGuestsCount"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:textSize="11sp"
+                        android:inputType="number"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnCalculateQuote"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Calculate My Quote"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="25dp"
+                    android:backgroundTint="#0D2A6E"
+                    android:textColor="#FFD700"/>
+
+                <!-- RESULT SECTION -->
+                <LinearLayout
+                    android:id="@+id/layoutResult"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="20dp"
+                    android:padding="12dp"
+                    android:background="#F0F4FF"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Estimated Total Cost"
+                        android:textSize="10sp"
+                        android:textColor="#888888"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:id="@+id/tvTotalQuote"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="R0.00"
+                        android:textSize="28sp"
+                        android:textStyle="bold"
+                        android:textColor="#0D2A6E"
+                        android:gravity="center"
+                        android:layout_marginTop="4dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="*This is an estimate. Final pricing depends on specific requirements."
+                        android:textSize="8sp"
+                        android:textColor="#888888"
+                        android:gravity="center"
+                        android:layout_marginTop="8dp"
+                        android:textStyle="italic"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnBookFromQuote"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:layout_marginTop="12dp"
+                        android:text="Proceed to Booking"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:textSize="10sp"
+                        app:cornerRadius="22dp"
+                        android:textColor="#0D2A6E"
+                        app:strokeColor="#0D2A6E"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>

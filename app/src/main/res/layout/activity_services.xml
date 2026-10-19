@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F4FF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Our Services"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="#0D2A6E"
+            android:fontFamily="serif"
+            android:gravity="center"/>
+
+        <View android:layout_width="40dp" android:layout_height="3dp" android:background="#C9982E" android:layout_gravity="center" android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Senzakwenzeke | Black Female Owned | Bothas Hill, KZN"
+            android:textSize="11sp"
+            android:textColor="#0D2A6E"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mobile Studio • Serving Greater Durban • Est. 2024"
+            android:textSize="10sp"
+            android:textColor="#666666"
+            android:gravity="center"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- DECOR -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:strokeColor="#0D2A6E"
+            app:strokeWidth="1.2dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="DECOR &amp; STYLING" android:textSize="14sp" android:textStyle="bold" android:textColor="#0D2A6E"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="From R1,500 per event" android:textSize="11sp" android:textColor="#C9982E" android:textStyle="bold" android:layout_marginTop="2dp"/>
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E8EAF6" android:layout_marginTop="14dp" android:layout_marginBottom="12dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="• Traditional Zulu &amp; Modern Fusion Decor" android:textSize="12sp" android:textColor="#0D2A6E"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="• Lobola (Umkhosi) - Full stage &amp; backdrop" android:textSize="12sp" android:textColor="#0D2A6E" android:layout_marginTop="6dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="• Weddings, Birthdays, Corporate Events" android:textSize="12sp" android:textColor="#0D2A6E" android:layout_marginTop="6dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="• Includes setup &amp; breakdown" android:textSize="11sp" android:textColor="#888888" android:layout_marginTop="10dp" android:textStyle="italic"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- CATERING -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="6dp"
+            app:cardBackgroundColor="#0D2A6E"
+            app:strokeColor="#C9982E"
+            app:strokeWidth="1.5dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="CATERING SERVICES" android:textSize="14sp" android:textStyle="bold" android:textColor="#FFFFFF"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="MOST POPULAR • From R180 pp" android:textSize="11sp" android:textColor="#FFD700" android:textStyle="bold" android:layout_marginTop="2dp"/>
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#1A3A8F" android:layout_marginTop="14dp" android:layout_marginBottom="12dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Basic - R180 pp (3 courses, 50 guests min)" android:textSize="12sp" android:textColor="#FFFFFF"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Standard - R250 pp (4 courses + dessert)" android:textSize="12sp" android:textColor="#FFFFFF" android:layout_marginTop="6dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Premium - R320 pp (5 courses + open bar setup)" android:textSize="12sp" android:textColor="#FFFFFF" android:layout_marginTop="6dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✓ Halal, Kosher &amp; Traditional menus available" android:textSize="11sp" android:textColor="#FFD700" android:layout_marginTop="10dp" android:textStyle="italic"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- EVENT PLANNING -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:strokeColor="#0D2A6E"
+            app:strokeWidth="1.2dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="FULL EVENT PLANNING" android:textSize="14sp" android:textStyle="bold" android:textColor="#0D2A6E"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="End-to-end management" android:textSize="11sp" android:textColor="#C9982E" android:textStyle="bold" android:layout_marginTop="2dp"/>
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E8EAF6" android:layout_marginTop="14dp" android:layout_marginBottom="12dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="• Venue sourcing &amp; booking" android:textSize="12sp" android:textColor="#0D2A6E"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="• Equipment: Tables, Chairs, Sound, Lighting" android:textSize="12sp" android:textColor="#0D2A6E" android:layout_marginTop="6dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="• On-the-day coordination (MC included)" android:textSize="12sp" android:textColor="#0D2A6E" android:layout_marginTop="6dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="• Post-event cleanup service" android:textSize="11sp" android:textColor="#888888" android:layout_marginTop="10dp" android:textStyle="italic"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBookNow"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="24dp"
+            android:text="BOOK CONSULTATION - R150 (Deductable)"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:cornerRadius="14dp"
+            android:backgroundTint="#0D2A6E"
+            android:textColor="#FFD700"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Consultation fee waived if you book • Secure via PayShap / EFT"
+            android:textSize="10sp"
+            android:textColor="#666666"
+            android:gravity="center"
+            android:layout_marginTop="8dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:cardCornerRadius="12dp"
+            app:cardBackgroundColor="#0D2A6E">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp" android:gravity="center">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="© 2026 Senzakwenzeke (Pty) Ltd" android:textColor="#FFD700" android:textSize="11sp" android:textStyle="bold"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Bothas Hill, Durban • 081 234 5678 • VAT Inclusive" android:textColor="#FFFFFF" android:textSize="9sp" android:layout_marginTop="4dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>

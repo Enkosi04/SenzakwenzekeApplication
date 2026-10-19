@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <!-- UNIFIED TOP NAV BAR -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:orientation="horizontal"
+        android:background="#0D2A6E"
+        android:gravity="center_vertical"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:elevation="8dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginEnd="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SENZAKWENZEKE"
+                android:textColor="#F2C100"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:singleLine="true"/>
+
+            <TextView
+                android:id="@+id/tvHeaderName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HELLO, USER"
+                android:textColor="#FFFFFF"
+                android:textSize="9sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <Button android:id="@+id/btnHome" android:layout_width="wrap_content" android:layout_height="40dp"
+                    android:text="Home" android:textSize="9sp" android:backgroundTint="#0D2A6E" android:textColor="#FFFFFF" style="?android:attr/borderlessButtonStyle"/>
+
+                <Button android:id="@+id/btnExplore" android:layout_width="wrap_content" android:layout_height="40dp"
+                    android:text="Explore" android:textSize="9sp" android:backgroundTint="#0D2A6E" android:textColor="#FFFFFF" style="?android:attr/borderlessButtonStyle"/>
+
+                <Button android:id="@+id/btnAbout" android:layout_width="wrap_content" android:layout_height="40dp"
+                    android:text="About" android:textSize="9sp" android:backgroundTint="#0D2A6E" android:textColor="#FFFFFF" style="?android:attr/borderlessButtonStyle"/>
+
+                <Button android:id="@+id/btnServices" android:layout_width="wrap_content" android:layout_height="40dp"
+                    android:text="Services" android:textSize="9sp" android:backgroundTint="#0D2A6E" android:textColor="#FFFFFF" style="?android:attr/borderlessButtonStyle"/>
+
+                <Button android:id="@+id/btnBooking" android:layout_width="wrap_content" android:layout_height="40dp"
+                    android:text="Booking" android:textSize="9sp" android:backgroundTint="#0D2A6E" android:textColor="#FFFFFF" style="?android:attr/borderlessButtonStyle"/>
+
+                <Button android:id="@+id/btnContact" android:layout_width="wrap_content" android:layout_height="40dp"
+                    android:text="Contact" android:textSize="9sp" android:backgroundTint="#0D2A6E" android:textColor="#FFFFFF" style="?android:attr/borderlessButtonStyle"/>
+
+                <Button android:id="@+id/btnSettings" android:layout_width="wrap_content" android:layout_height="40dp"
+                    android:text="Settings" android:textSize="9sp" android:backgroundTint="#0D2A6E" android:textColor="#FFFFFF" style="?android:attr/borderlessButtonStyle"/>
+
+                <Button android:id="@+id/btnHelp" android:layout_width="wrap_content" android:layout_height="40dp"
+                    android:text="Help" android:textSize="9sp" android:backgroundTint="#0D2A6E" android:textColor="#FFFFFF" style="?android:attr/borderlessButtonStyle"/>
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/page_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

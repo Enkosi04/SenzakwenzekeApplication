@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FF">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+
+        <!-- HERO -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="#FFFFFF" android:gravity="center" android:orientation="vertical" android:padding="24dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="WHO WE ARE" android:textColor="#C9982E" android:textSize="8sp" android:textStyle="bold" android:letterSpacing="0.2"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="About Senza Kwenzeke" android:textColor="#0D2A6E" android:textSize="24sp" android:textStyle="bold"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="'Senzakwenzeke' — We Make It Happen" android:textColor="#666666" android:textSize="11sp" android:textStyle="italic"/>
+            <View android:layout_width="40dp" android:layout_height="3dp" android:layout_marginTop="12dp" android:background="#C9982E"/>
+        </LinearLayout>
+
+        <!-- OUR STORY -->
+        <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="16dp" app:cardBackgroundColor="#FFFFFF" app:cardCornerRadius="18dp" app:cardElevation="8dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="46dp" android:background="#0D2A6E" android:gravity="center" android:orientation="horizontal">
+                    <View android:layout_width="20dp" android:layout_height="2dp" android:background="#C9982E"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="10dp" android:layout_marginEnd="10dp" android:text="OUR STORY" android:textColor="#FFD700" android:textSize="11sp" android:textStyle="bold" android:letterSpacing="0.15"/>
+                    <View android:layout_width="20dp" android:layout_height="2dp" android:background="#C9982E"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="18dp">
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:lineSpacingExtra="5dp" android:text="Based in the heart of Bothas Hill, Durban, Senza Kwenzeke Decor and Catering was founded with one mission: to turn your dream event into reality. From intimate lobola celebrations to grand weddings, we bring authentic Zulu tradition mixed with modern elegance." android:textColor="#333333" android:textSize="11sp"/>
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="14dp" android:layout_marginBottom="14dp" android:background="#F0F0F0"/>
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:lineSpacingExtra="5dp" android:text="What started as a small family business has grown into Durban's trusted name for decor and catering. We don't just decorate — we create memories that last forever. Every table, every plate, every drape tells a story of Ubuntu and excellence." android:textColor="#666666" android:textSize="10sp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- MISSION VISION VALUES -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingEnd="16dp" android:paddingStart="16dp" android:weightSum="3">
+            <androidx.cardview.widget.CardView android:layout_width="0dp" android:layout_height="155dp" android:layout_marginEnd="6dp" android:layout_weight="1" app:cardBackgroundColor="#FFFFFF" app:cardCornerRadius="16dp" app:cardElevation="4dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:orientation="vertical" android:padding="12dp">
+                    <View android:layout_width="32dp" android:layout_height="3dp" android:background="#C9982E"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="OUR MISSION" android:textColor="#0D2A6E" android:textSize="9sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:gravity="center" android:lineSpacingExtra="3dp" android:text="To deliver affordable, beautiful events with dignity." android:textColor="#666666" android:textSize="8sp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView android:layout_width="0dp" android:layout_height="155dp" android:layout_marginEnd="3dp" android:layout_marginStart="3dp" android:layout_weight="1" app:cardBackgroundColor="#0D2A6E" app:cardCornerRadius="16dp" app:cardElevation="8dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:orientation="vertical" android:padding="12dp">
+                    <View android:layout_width="32dp" android:layout_height="3dp" android:background="#FFD700"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="OUR VISION" android:textColor="#FFD700" android:textSize="9sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:gravity="center" android:lineSpacingExtra="3dp" android:text="To be the #1 decor brand in KZN." android:textColor="#FFFFFF" android:textSize="8sp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView android:layout_width="0dp" android:layout_height="155dp" android:layout_marginStart="6dp" android:layout_weight="1" app:cardBackgroundColor="#FFFFFF" app:cardCornerRadius="16dp" app:cardElevation="4dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:orientation="vertical" android:padding="12dp">
+                    <View android:layout_width="32dp" android:layout_height="3dp" android:background="#C9982E"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="OUR VALUES" android:textColor="#0D2A6E" android:textSize="9sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:gravity="center" android:lineSpacingExtra="3dp" android:text="Ubuntu, Respect &amp; Excellence." android:textColor="#666666" android:textSize="8sp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <!-- CTA -->
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnViewServices" android:layout_width="200dp" android:layout_height="50dp" android:layout_gravity="center" android:layout_marginTop="24dp" android:backgroundTint="#0D2A6E" android:text="View Our Services →" android:textColor="#FFD700" android:textSize="10sp" android:textStyle="bold" app:cornerRadius="25dp"/>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="© 2026 Senzakwenzeke Decor &amp; Catering" android:textColor="#C9982E" android:textSize="9sp" android:textStyle="bold" android:gravity="center" android:padding="16dp"/>
+    </LinearLayout>
+</ScrollView>
