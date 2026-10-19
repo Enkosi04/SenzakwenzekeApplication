@@ -1,81 +1,76 @@
-package com.example.senzakwenzekeapplication
+Senzakwenzeke Decor & Catering - Android App
 
-import android.content.ContentValues
-import android.content.Context
-import android.database.sqlite.SQLiteDatabase
-import android.database.sqlite.SQLiteOpenHelper
-import org.mindrot.jbcrypt.BCrypt
+SenzakwenzekeApplication is the Android app for Senzakwenzeke Pty Ltd, a black female-owned decor and catering company in Bothas Hill, Durban.
 
-class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, "senzakwenzeke.db", null, 2) {
+Customers can view services, get an instant quote, and book an event. Bookings use the same database as the website so the same date cannot be booked twice.
 
-    override fun onCreate(db: SQLiteDatabase) {
-        db.execSQL("CREATE TABLE Users(user_id INTEGER PRIMARY KEY AUTOINCREMENT, full_name TEXT, email TEXT UNIQUE, phone TEXT, password_encrypted TEXT)")
-        db.execSQL("CREATE TABLE Services(service_id INTEGER PRIMARY KEY, name TEXT, price TEXT, description TEXT)")
-        db.execSQL("CREATE TABLE Bookings(booking_id INTEGER PRIMARY KEY AUTOINCREMENT, user_id INTEGER, service_id INTEGER, event_date TEXT, guests TEXT, location TEXT, status TEXT)")
-        db.execSQL("CREATE TABLE Feedback(message_id INTEGER PRIMARY KEY AUTOINCREMENT, user_id INTEGER, message TEXT, rating INTEGER)")
+Team - Code Crafters
+- Enkosi Mdingi ST10456604
+- Awande Mdingi ST10399698
+- Mnqobi Ngwane ST10325299
+- Bandile Mgaga ST10279634
+- Phumlani Msibi ST10409047
 
-        seedData(db)
-    }
+FEATURES
 
-    override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
-        db.execSQL("DROP TABLE IF EXISTS Users")
-        db.execSQL("DROP TABLE IF EXISTS Services")
-        db.execSQL("DROP TABLE IF EXISTS Bookings")
-        db.execSQL("DROP TABLE IF EXISTS Feedback")
-        onCreate(db)
-    }
+1. Authentication
+- Register: Full Name, Email, Phone (081...), Password with eye icon
+- Password is encrypted before storage - POPIA Compliant
+- Login: Email + Password with Login Securely
+- Google SSO: Continue with Google - SSO, greets as Hello, SSO User
 
-    private fun seedData(db: SQLiteDatabase) {
-        // Seed 10 Users
-        val pass = BCrypt.hashpw("123456", BCrypt.gensalt())
-        for (i in 1..10) {
-            val cv = ContentValues().apply {
-                put("full_name", "Test User $i")
-                put("email", "user$i@example.com")
-                put("phone", "012345678$i")
-                put("password_encrypted", pass)
-            }
-            db.insert("Users", null, cv)
-        }
+2. Home
+- Personal greeting: Hello, [Name]
+- Buttons: BOOK NOW, EXPLORE, Get a Free Quote
+- Business facts: 500+ events, 4.9 rating, 100% female owned
+- Social links: Facebook, Instagram, WhatsApp
 
-        // Seed 10 Services
-        val services = listOf(
-            Pair("Decor", "R1500"), Pair("Basic Catering", "R180pp"), Pair("Standard Catering", "R250pp"),
-            Pair("Premium Catering", "R320pp"), Pair("Lobola", "R5500"), Pair("White Wedding", "R8500"),
-            Pair("Full Combo", "R12000"), Pair("Birthdays", "R2000"), Pair("Corporate", "R4000"),
-            Pair("Consultation", "R150")
-        )
-        services.forEach {
-            val cv = ContentValues().apply {
-                put("name", it.first)
-                put("price", it.second)
-                put("description", "Premium quality ${it.first} service in Bothas Hill.")
-            }
-            db.insert("Services", null, cv)
-        }
+3. About
+- Our Story, Our Mission, Our Vision, Our Values (Ubuntu, Respect, Excellence)
+- Button: View Our Services
 
-        // Seed 10 Bookings
-        val locations = listOf("Bothas Hill", "Hillcrest", "Kloof", "Pinetown", "Durban", "Westville", "Umlazi", "Berea", "Morningside", "Mount Edgecombe")
-        for (i in 1..10) {
-            val cv = ContentValues().apply {
-                put("user_id", i)
-                put("service_id", i)
-                put("event_date", "2024-11-$i")
-                put("guests", "${i * 10}")
-                put("location", locations[i-1])
-                put("status", "Pending")
-            }
-            db.insert("Bookings", null, cv)
-        }
+4. Services
+- Full service list with starting prices
+- Halal, Kosher and traditional menus available
+- BOOK CONSULTATION - R150 (Deductable) - fee waived if you book, pay via EFT or PayShap
 
-        // Seed 10 Feedback
-        for (i in 1..10) {
-            val cv = ContentValues().apply {
-                put("user_id", i)
-                put("message", "Great service from Senzakwenzeke!")
-                put("rating", 5)
-            }
-            db.insert("Feedback", null, cv)
-        }
-    }
-}
+5. Instant Free Quote
+- Categories: Decor and Styling (from R1,500), Basic Catering (R180 pp), Standard Catering (R250 pp), Premium Catering (R320 pp), Full Event Combo (from R12,000)
+- Enter Number of Guests then Calculate My Quote to show Estimated Total Cost
+- Button: PROCEED TO BOOKING
+
+6. Booking - Book Your Event
+- Pre-filled Full Name, Email, Phone if logged in
+- Event Date in format YYYY-MM-DD (past dates rejected)
+- Service Type: DECOR / CATERING / FULL EVENT
+- Number of Guests then Submit Booking
+- Double-booking protection, confirmation message
+- Warning: Booking is final only after business confirms
+
+7. Contact
+- Location: Bothas Hill, Durban, KZN 3610
+- Phone: 081 234 5678, Email: info@senzakwenzeke.co.za
+- Buttons: WhatsApp Us, Facebook, Instagram
+- Form: Send Message (Name, Email, Message)
+
+8. Settings
+- Account: Change Full Name, Change Phone, Save Account Changes
+- App Preferences: Service Area - Bothas Hill, DBN, Lobola and Wedding Offers, Currency - ZAR (R), Business Profile - V1.0, Privacy and Terms
+- Security: Change Password, Logout - Clear Session
+
+9. Help and Support
+- In-app help for register, login, booking, services, settings
+
+Installation
+App is shared as APK from GitHub Releases:
+1. Open https://github.com/Enkosi04/AppSenzakwenzeke > Releases
+2. Download latest APK
+3. Tap Install then Open (Allow from this source if asked)
+
+Tech Stack
+- Kotlin, Android Studio
+- Firebase Firestore (Bookings collection)
+
+
+Splash screen 
+
