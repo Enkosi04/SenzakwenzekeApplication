@@ -14,6 +14,7 @@ Team - Code Crafters
 FEATURES
 
 1. Authentication
+Splash screen
 - Register: Full Name, Email, Phone (081...), Password with eye icon
 - Password is encrypted before storage - POPIA Compliant
 - Login: Email + Password with Login Securely
@@ -72,5 +73,5 @@ Tech Stack
 - Firebase Firestore (Bookings collection)
 
 
-Splash screen 
+
 
